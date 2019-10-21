@@ -1,0 +1,119 @@
+function setup(){
+		createCanvas(400,400);
+}
+
+
+function draw(){
+
+	background(135,206,235)
+
+//grass
+	fill(96,128,56)
+	stroke(96,128,56)
+	rect(0,150,400,200)
+
+//road
+	fill(50)
+	stroke(50)
+	rect(0,250,400,150)
+
+	fill(255,175,0)
+	stroke(255,175,0)
+	rect(0,325,25,10)
+	rect(75,325,50,10)
+	rect(175,325,50,10)
+	rect(275,325,50,10)
+	rect(375,325,50,10)
+
+//tree
+	fill(101,67,33)
+	stroke(101,67,33)
+	rect(75,110,10,110)
+
+	fill(90,190,50)
+	stroke(90,190,50)
+	ellipse(80,100,90)
+
+mouseClicked()
+
+function mouseClicked()
+{
+	if(mouseX>130 && mouseX<370 && mouseY>140 && mouseY<300)
+{
+
+		fill(240,210,170)
+		noStroke()
+		ellipse(280,220,220,160)
+		ellipse(220,220,170,150)
+		
+push()
+		translate(200,159.5)
+		rotate(-PI/13)
+		fill(255,125,120,130)
+		stroke(225)
+		strokeWeight(2)
+		ellipse(0,0,80,22)
+pop()
+
+fill(0,0,0,70)
+quad(280,140,280,190,282,190,282,140)
+quad(287,141,287,172,289,172,289,141)
+quad(295,142,295,183,297,183,297,142)
+
+}
+	else{
+		//tiresbottom
+		fill(0,0,255);
+		stroke(0);
+		strokeWeight(3);
+		rect(140,250,220,15)
+
+	//truckTire;
+		fill(90);
+		strokeWeight(3);
+		ellipse(170,275,50);
+		ellipse(320,275,50);
+
+		fill(255);
+		ellipse(170,275,25);
+		ellipse(320,275,25);
+
+	//door
+		fill(255,125,0);
+		rect(250,150,75,100);
+		rect(325,200,35,50);
+
+	//doorwindow
+		fill(255);
+		rect(260,160,55,40);
+
+	//headlights
+		fill(255,255,0);
+		ellipse(350,233,10,20);
+
+	//Towingthingy
+		fill(25,255,25);
+		push();
+		translate(140,130);
+		rotate(-PI/4.7);
+		rect(0,0,20,140);
+		pop();
+
+		fill(25,255,25);
+		ellipse(235,235,30);
+
+		line(150,144,150,210);
+		ellipse(150,210,10);
+		ellipse(150,220,20);
+
+		fill(96,128,56)
+		noStroke()
+		ellipse(150,220,10)
+		quad(155,220,150,225,125,210,131,200)
+	
+
+}
+}
+
+
+}
